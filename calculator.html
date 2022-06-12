@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <style>
+        button {
+            padding: 10px;
+            border-radius: 10px;
+        }
+        
+        .tbl {
+            /* border: 2px solid; */
+            height: 50vh;
+            width: 50%;
+        }
+        
+        .tbl td {
+            /* border: 2px solid; */
+            font-size: xx-large;
+            text-align: center;
+        }
+        
+        .tbl td button {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .inp {
+            width: 49%;
+            height: 10vh;
+            font-size: xx-large;
+            /* background-color: black; */
+            color: rgb(52, 245, 4);
+        }
+        
+        .wraper {
+            height: 100vh;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <div class="container">
+        <input type="text" id="inp" type="number" placeholder="Enter Number">
+
+        <table class="tbl">
+            <tr>
+                <td><button>1</button></td>
+                <td><button>2</button></td>
+                <td><button>3</button></td>
+                <td><button>/</button></td>
+            </tr>
+            <tr>
+                <td><button>4</button></td>
+                <td><button>5</button></td>
+                <td><button>6</button></td>
+                <td><button>x</button></td>
+            </tr>
+            <tr>
+                <td><button>7</button></td>
+                <td><button>8</button></td>
+                <td><button>9</button></td>
+                <td><button>-</button></td>
+            </tr>
+            <tr>
+                <td><button>0</button></td>
+                <td><button>00</button></td>
+                <td><button>+</button></td>
+                <td><button>%</button></td>
+
+            </tr>
+            <tr>
+                <td><button>=</button></td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <script>
+        let input = document.getElementById('inp');
+        let button = document.getElementsByTagName('button');
+        for (let a = 0; button.length > a; a++) {
+            button[a].addEventListener('click', function() {
+                if (button[a].innerHTML == '=') {
+                    input.value = eval(input.value)
+                }
+
+                // input.value += button[a].innerHTML;
+                let check = parseInt(button[a].innerHTML);
+                input.value += check;
+            })
+        }
+    </script>
+</body>
+
+</html>

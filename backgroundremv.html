@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .ull {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: aquamarine;
+        }
+        
+        .ull li {
+            border: 2px solid;
+            list-style: none;
+            /* background-color:white; */
+            padding: 20px;
+            width: 10%;
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        ul li:hover {
+            background-color: red;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .ctive {
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+    <ul class="ull">
+        <li class="item" data-item="BaGS">bags</li>
+        <li class="item" data-item="WaTCHES">watches</li>
+        <li class="item" data-item="ElECT">electronics</li>
+        <li class="item" data-item="ShOES">shoes</li>
+
+    </ul>
+    <div class="container">
+
+        <div class="imgdiv" data-filter="BaGS">
+            <img src="photos/2.jpg.jpg" width=100% height="100vh" alt="">
+        </div>
+        <div class="imgdiv" data-filter="WaTCHES">
+            <img src="photos/4.jpg.jpeg" width=100% height="100vh" alt="">
+        </div>
+        <div class="imgdiv" data-filter="ElECT">
+            <img src="photos/3.jpg.jpg" width=100% height="100vh" alt="" data-filter="">
+        </div>
+        <div class="imgdiv" data-filter="ShOES">
+            <img src="photos/1.jpg.png" width=100% height="100vh" alt="">
+        </div>
+    </div>
+
+    <script>
+        let item = document.getElementsByClassName('item');
+
+        for (let a = 0; item.length > a; a++) {
+            item[a].addEventListener('click', function() {
+                for (let k = 0; item.length > k; k++) {
+                    item[k].classList.remove('ctive');
+                    // console.log(item[k]);
+                }
+                item[a].classList.add("ctive");
+                // console.log(item[a].getAttribute('data-item'));
+
+
+                let fillitem = item[a].getAttribute('data-item');
+                let img = document.getElementsByClassName('imgdiv');
+                for (let x = 0; img.length > x; x++) {
+                    let filter = img[x].getAttribute('data-filter');
+                    console.log(filter);
+
+                    img[x].style.display = 'none';
+
+                    if (filter == fillitem) {
+                        img[x].style.display = 'block';
+
+
+                    } else if (fillitem == 'WaTCHES') {
+                        img[x].style.display = 'block';
+
+                    }
+
+
+
+                    // img[x].style.display = 'none';
+                }
+
+            });
+
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

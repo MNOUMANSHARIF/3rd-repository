@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    h1 {
+        text-align: center;
+        color: aqua;
+    }
+</style>
+
+<body>
+    <button id="butt">Click To Add</button>
+    <input type="text" id="inpt1" required>
+    <input type="text" id="inpt2" required>
+
+
+    <script>
+        let btn = document.getElementById("butt");
+        let a = document.getElementById("inpt1");
+        let b = document.getElementById("inpt2");
+        btn.addEventListener('click', function() {
+            let n = "<h1>" + "Addition Result " + "</h1>" + "<h1>" + parseInt(inpt1.value) + parseInt(inpt2.value) + "</h1>";
+
+            if (inpt1.value == '') {
+                z = prompt("enter value again")
+                e = parseInt(z)
+                f = e + parseInt(inpt2.value)
+
+                document.write(f);
+                document.write(typeof inpt2.value);
+
+            }
+
+            if (inpt2.value == '') {
+                alert("Empty Field 2")
+            }
+
+            document.write(n);
+            console.log(z);
+
+
+        })
+
+        // document.write(n)
+        // console.log(n)
+    </script>
+
+
+</body>
+
+</html>

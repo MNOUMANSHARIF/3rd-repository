@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with loops / while / for </title>
+</head>
+<body>
+    <style>
+        .tab{width: 50%;background-color: rgb(219, 174, 10);
+            justify-content: center;border: 1px solid;
+            border-radius: 5px;font-size:40px;display: flex;margin-left: 25%;
+
+
+        }
+        .tabb{justify-content: space-around;margin: 10%;}
+        .tabbb{margin: 10%;}
+        .txt{text-align: center; margin-top: 2%; border-bottom: 2px solid; width: fit-content;
+        margin-left: 40%;}
+    </style>
+  
+    <!-- <script>
+        let v = 1;
+        while(v < 10){document.write(v + "<br>");
+        v++ ;}
+
+
+    </script>  -->
+    <script>
+        var value = prompt("Enter The Number to Get its Table");
+        inpt = parseInt(value);
+        document.write("<h1 class='txt'>" + "This is the Table of : " + inpt + "</h1>")
+        let a = 1;
+        while(a < 11 ){document.write("<table class='tab'>" + "<tr class='tabb'>" + "<td class='tabbb'>" + value + " X " +  a  + " = " +  inpt *  a + "<br>" + "</td>" + "</td>" + "</table>" );
+        a++}
+    </script>
+<div class="scr" style="height:15vh ; width: 100%;background-color: antiquewhite;
+ overflow: scroll;justify-content: center;text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ font-style: italic; font-size: 50px;">
+    <script>
+        var d = prompt("Enter The Number to Get its Table2");
+        lav = parseInt(d);
+        for(val = 0; val <= lav ; val++){
+            document.write("--<<<" + val + ">>>--" + "<br>");
+        }
+    </script>
+    
+    </div>
+</body>
+</html>

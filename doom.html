@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="inpt">
+<button id="butn">Submit</button>
+<ul id="uul"></ul>
+<script>
+    let todoinput = document.getElementById('inpt');
+    let todobtn = document.getElementById('butn');
+    let ul = document.getElementById('uul');
+    todobtn.addEventListener('click', function ( ) {
+        let li = document.createElement('li');
+        let input = document.createElement('input');
+        let del = document.createElement('button');
+        let edit = document.createElement('button')
+        input.setAttribute('value' , todoinput.value);
+        input.setAttribute('readonly','readonly');
+        input.setAttribute('class', 'formcontrol')
+        del.innerHTML = 'delete';
+        edit.innerHTML = 'Edit';
+        li.appendChild(input);
+        li.appendChild(edit);
+        li.appendChild(del);
+        ul.appendChild(li);
+        todoinput.value = '';
+        del.addEventListener('click' , function ( ) {
+            let ver = confirm('ok to delete');
+            if(ver){
+                ul.removeChild(li);
+
+            }
+
+
+        })
+
+
+        edit.addEventListener('click' , function () {
+            if(edit.innerHTML == "Edit"){
+            input.removeAttribute('readonly','readonly');
+            edit.innerHTML = 'Save';
+            }
+            else{
+                input.setAttribute('readonly','readonly');
+                edit.innerHTML = 'Saved';
+                
+            }
+        })
+
+    })
+
+</script>
+
+</body>
+</html> 

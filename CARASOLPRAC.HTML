@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="imgs">
+                    <img src="photos/1.jpg.png" alt="" height="500vh" width="100%">
+                    <img src="photos/2.jpg.jpg" alt="" height="500vh" width="100%">
+                    <img src="photos/3.jpg.jpg" alt="" height="500vh" width="100%">
+                    <img src="photos/4.jpg.jpeg" alt="" height="500vh" width="100%">
+
+                </div>
+                <div class="btnsgrp">
+                    <button class="btn btn-success" onclick="add(1) ">Next</button>
+                    <button class="btn btn-success" onclick="add(-1) ">Prev</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            let img = document.getElementsByTagName('img');
+            let slide = 0;
+
+            function add(n) {
+                slide = slide + n;
+                if (slide >= img.length) {
+                    slide = 0;
+                }
+                if (slide < 0) {
+                    slide = img.length - 1
+                }
+                slider(slide)
+
+            }
+            slider(0);
+
+            function slider(n) {
+                for (a = 0; img.length > a; a++) {
+                    img[a].style.display = 'none';
+
+
+                    console.log(a)
+                }
+                img[n].style.display = 'block';
+
+            }
+        </script>
+    </div>
+
+
+
+</body>
+
+</html>

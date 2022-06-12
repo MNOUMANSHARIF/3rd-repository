@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #sidebar {
+            position: fixed;
+            width: 20%;
+            height: 100%;
+            background-color: black;
+            left: -20%;
+        }
+        
+        #sidebar li {
+            color: white;
+            font-size: 30px;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 1px solid greenyellow;
+        }
+        
+        #menu {
+            position: absolute;
+            left: 105%;
+            top: 0;
+            padding: 10px;
+        }
+        
+        #sidebar.active {
+            left: 0;
+        }
+    </style>
+    <div id="sidebar">
+        <ul>
+            <li>Sports</li>
+            <li>Exercise</li>
+            <li>Fitness</li>
+            <li>Men Garments</li>
+            <li>Women Garments</li>
+        </ul>
+        <button id="menu" onclick="now() , sad()">MENU</button>
+    </div>
+    <script>
+        let btn = document.getElementById('menu');
+
+        function now() {
+            if (btn.innerHTML == 'MENU') {
+                document.getElementById('sidebar').classList.add('active');
+
+                btn.innerHTML = ' < '
+            } else {
+                document.getElementById('sidebar').classList.remove('active');
+
+                btn.innerHTML == ' X '
+                btn.innerHTML = 'MENU'
+            }
+        }
+    </script>
+</body>
+
+</html>

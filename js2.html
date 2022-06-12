@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt</title>
+</head>
+
+<body>
+    <style>
+        .nomi {
+            color: blue;
+        }
+    </style>
+
+    <script>
+        var a = prompt("Enter Total Marks (Total Marks = 500)");
+
+        let b = prompt("Enter Obtained Marks");
+        var c = 100
+
+        document.write(b / a * c);
+
+        if (b >= 450 && b < 501) {
+
+            document.write(" % YOU HAVE GOT ( A+ ) GRADE");
+        }
+
+
+        if (b >= 350 && b < 400) {
+            document.write(" % YOU HAVE GOT ( A ) GRADE ");
+        }
+        if (b >= 300 && b < 350) {
+            document.write(" % YOU HAVE GOT ( B ) GRADE ");
+        }
+        if (b >= 250 && b < 300) {
+            document.write(" % YOU HAVE GOT ( C ) GRADE ");
+        }
+        if (b >= 200 && b < 250) {
+            document.write(" % YOU HAVE GOT ( D ) GRADE ");
+        }
+        if (b >= 165 && b < 200) {
+            document.write(" % YOU HAVE GOT ( E ) GRADE ");
+        }
+        if (b < 165) {
+            document.write(" % SORRY YOU FAIL");
+        } else {
+
+        }
+    </script>
+</body>
+
+</html>

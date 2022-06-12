@@ -1,0 +1,10 @@
+.slidder{height: 70vh;}
+.slidder img{height: 100%; width: 90%;}
+.bbar1 li {font-size: large;margin:none;height: 10vh;color: black;padding: 3% 2%;}
+.bbar1 li:hover{background-color: rgb(224, 224, 219);}
+.bbar1 ul{align-items: center; justify-content: center;margin: none;margin-left: 4%; font-family: Impact,
+     Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+.hesd{font-family: Impact, Haettenschweiler, 'Arial Narrow ', sans-serif;
+font-weight: 100;}
+/* .piccs1 img{height:70%; */
+/* width: 50%;} */
